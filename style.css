@@ -10,8 +10,8 @@ body {
 
 p, blockquote {
   font-size: .9em;
-  /*em is a scalable unit. 1em = current font size
-   *Default font = 12px therefore, 0.9em = 10.8px
+  /*em is a scalable unit
+   *Default: 1em = 12pt = 16px = 100%
   */
 
   line-height: 1.6em;
@@ -29,7 +29,7 @@ ul {
 .container {
   text-align: center;
   padding: .8em 1.2em;
-  /*If only one is specified, it applies to all directions
-   *Top Bottom Left Right
+  /*padding: [Top] [Bottom] [Left] [Right];
+   *If only one is specified, it applies to all directions
   */
 }
