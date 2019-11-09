@@ -2,6 +2,10 @@
 
 @import url('https://fonts.googleapis.com/css?family=Montserrat&display=swap');
 
+.hide-mobile {
+  display: none; /*Hides all elements and their sub-elements of class: hide-mobile*/
+}
+
 body {
   margin: 0;
   background-color: white; /*Default is white*/
@@ -16,7 +20,7 @@ p, blockquote {
 
   line-height: 1.6em;
   /*line-height is the spacing between lines
-   * i.e. "double spaced" or "1.15"
+   *i.e. "double spaced" or "1.15"
   */
 }
 
@@ -29,7 +33,136 @@ ul {
 .container {
   text-align: center;
   padding: .8em 1.2em;
-  /*padding: [Top] [Bottom] [Left] [Right];
+  /*padding: [Top] [Left] [Bottom] [Right];
    *If only one is specified, it applies to all directions
+   *Write [auto] for values to be calculated
+   *Ex: padding: 2em auto 2em 25%;
   */
 }
+
+header {
+	display: grid;
+  grid-template-columns: 2fr 4fr 1fr;
+  grid-template-areas: "logo space menu";
+  align-items: center;
+}
+
+nav {
+  grid-area: menu;
+  text-align: right;}
+
+.menu {
+  width: 25px; /*Doesn't need to change b/c phone screens have little variation*/
+  height: 25px;
+  padding-right: 5%;
+}
+
+.logo {
+  width: 100%;}
+
+.server {
+  width: 70%;
+  margin: 2em auto 2em 25%;
+}
+
+h1, .subhead {
+  position: relative;
+  z-index: 3;
+}
+
+.subheader {
+  font-size: 1.1em;
+}
+
+
+.blue-container {
+  width: 100%;
+  background: #00C2FF;
+  color: white;
+  margin-top: 15% 0 0 0;
+  padding: 4em 0 0;
+  border-top-left-radius: 40px; /*Edge Rounding! Also possible to use percentages!*/
+  transform: skewY(-2deg);
+}
+
+.blue-container::before { /*Double colon is for CSS 3 specification for pseudo elements*/
+  content: '';
+  width: 40px;
+  height: 40px;
+  background-color: #00C2FF;
+  position: absolute;
+  top: calc(-1*(40px - 1px)); /*Brings the box down one for some overlap*/
+  right: 0;
+  z-index: -2;
+}
+
+.blue-container::after { /*Double colon is for CSS 3 specification for pseudo elements*/
+  content: '';
+  width: calc(40px * 2); /*Multiply by two so circle's center is in the top left*/
+  height: calc(40px * 2); /*Multiply by two so circle's center is in the top left*/
+  border-radius: 50%;
+  background-color: white;
+  position: absolute;
+  top: calc(-1*(40px*2));
+  right: 0;
+  z-index: -1;
+}
+
+.blue-container .container {
+  transform: skewY(2deg); /*Unskews the elements inside blue-container*/
+}
+
+.blue-container li {
+  margin-bottom: 3em;
+}
+
+.blue-container img {
+  width: 14%;
+}
+
+.blue-container li:nth-child(3) img {
+  width: 9%;
+}
+
+.blue-container li:nth-child(3) {
+  margin-bottom: 0;
+  padding-bottom: 0;
+}
+
+/*
+.straight-edge {
+  content: '';
+  width: 100%;
+  height: 7%;
+  background-color: #00C2FF;
+  position: absolute;
+  margin: -1.75% 0 0 0;
+}
+*/
+
+.blue-box {
+  background: linear-gradient(to Bottom,  white 0%,white 50%,#00C2FF 50%,#00C2FF 100%);;
+  padding-bottom: 2%;
+  padding-top: -10%;
+}
+
+.grey-container {
+  background: #F6F6F6; /*#F6F6F6*/
+  width: 100%;
+  padding: 0em 0 3em;
+}
+
+.grey-container li:first-child {
+  margin-bottom: 3.2em;
+}
+
+figure {
+  margin: 0;
+  pad: 0;
+}
+
+figcaption {
+  font-weight: bold;
+  color: #00C2FF;
+}
+
