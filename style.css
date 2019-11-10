@@ -158,6 +158,12 @@ figcaption {
   color: #00C2FF;
 }
 
-/*h2 {
-  margin-
-}*/
+.cta {
+  display: block;
+  background: #00CC80;
+  color: white;
+  text-decoration: none; /*Gets rid of link underline*/
+  width: calc(100% - 1em);
+  border-radius: 2em; /*Make this around or double the font size. In this case, it's 12pts = 16px = 1em*/
+  padding: 0.5em;
+}
