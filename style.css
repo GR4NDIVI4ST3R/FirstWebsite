@@ -274,6 +274,7 @@ nav ul li a {
 .exit-btn img{
   background: none;
   text-align: right;
-  margin: 1.6em 1.6em 1em 1.6em;
+  margin: 1.6em 1.6em 1em;
   width: 18px;
+  cursor: pointer; /*Changes cursor to pointing finger when hovering over the exit btn*/
 }
