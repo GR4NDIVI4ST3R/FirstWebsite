@@ -55,6 +55,7 @@ nav {
   width: 25px; /*Doesn't need to change b/c phone screens have little variation*/
   height: 25px;
   padding-right: 5%;
+  margin: 0;
 }
 
 .logo {
@@ -254,8 +255,7 @@ nav ul {
 }
 
 nav ul li {
-  background: #32373b;
-  /*background: #2E3337;*/
+  background: #32373B;
   width: 100%;
   padding: 1em 2em;
 }
@@ -263,6 +263,11 @@ nav ul li {
 nav ul li a {
   color: white;
   text-decoration: none;
+}
+
+nav .links:hover {
+	background-color: #3E4347;
+	
 }
 
 .exit-btn {

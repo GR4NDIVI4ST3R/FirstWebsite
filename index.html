@@ -17,12 +17,12 @@
                     <img src="images/ham.svg" alt="toggle menu" class="menu" id="menu">
                 </a>
 
-                <ul class="show-desktop hide-mobil" id="nav">
+                <ul class="show-desktop hide-mobile" id="nav">
                     <li id="exit" class="exit-btn hide-desktop"><img src="images/exit.svg" alt="exit menu"></li>
-                    <li><a href="#">home</a></li>
-                    <li><a href="#">services</a></li>
-                    <li><a href="#">about</a></li>
-                    <li><a href="#">contact</a></li>
+                    <li class="links"><a href="#">home</a></li>
+                    <li class="links"><a href="#">services</a></li>
+                    <li class="links"><a href="#">about</a></li>
+                    <li class="links"><a href="#">contact</a></li>
                 </ul>
             </nav>
         </header>
@@ -100,6 +100,22 @@
             </div>
         </div>
     </footer>
+    
+    <script>
+    	var menu = document.getElementById('menu');
+    	var nav = document.getElementById('nav');
+    	var exit = document.getElementById('exit');
+
+        menu.addEventListener('click', function(s) {
+            nav.classList.toggle('hide-mobile');
+            s.preventDefault(); /*Prevents screen from jumping back to the top when the menu is clicked*/
+        });
+
+        exit.addEventListener('click', function() {
+            nav.classList.toggle('hide-mobile');
+        });
+
+    </script>
     
 </body>
 </html>
